@@ -5,8 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { IAppState, INITIAL_STATE, rootReducer } from './store';
-import { TodoDashboardComponent } from './todo-dashboard/todo-dashboard.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodoDashboardComponent } from './tasking/todo-dashboard/todo-dashboard.component';
+import { TodoListComponent } from './tasking/todo-list/todo-list.component';
 
 @NgModule({
   declarations: [ AppComponent, TodoDashboardComponent, TodoListComponent ],

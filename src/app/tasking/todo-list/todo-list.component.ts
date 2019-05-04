@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { select, NgRedux } from '@angular-redux/store';
-import { ITodo } from '../todo';
-import { IAppState } from '../store';
-import { ADD_TODOS, TOGGLE_TODOS, REMOVE_TODOS } from '../actions';
+import { ITodo } from '../../todo';
+import { IAppState } from '../../store';
+import { ADD_TODOS, TOGGLE_TODOS, REMOVE_TODOS } from '../../actions';
 
 @Component({
   selector: 'app-todo-list',

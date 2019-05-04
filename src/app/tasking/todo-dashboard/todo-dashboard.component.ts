@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { select, NgRedux } from '@angular-redux/store';
-import { IAppState } from '../store';
-import { REMOVE_ALL_TODOS } from '../actions';
+import { IAppState } from '../../store';
+import { REMOVE_ALL_TODOS } from '../../actions';
 
 @Component({
   selector: 'app-todo-dashboard',
