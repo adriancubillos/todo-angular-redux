@@ -20,6 +20,8 @@ export class AppModule {
       ? [ devTools.enhancer() ] // <- New
       : []; // <- New
 
+    console.log('INITIAL_STATE', INITIAL_STATE);
+
     ngRedux.configureStore(rootReducer, INITIAL_STATE, [], storeEnhancers);
   }
 }

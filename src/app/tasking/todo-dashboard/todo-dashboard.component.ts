@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { select, NgRedux } from '@angular-redux/store';
 import { IAppState } from '../../store';
-import { REMOVE_ALL_TODOS } from '../../actions';
+import { REMOVE_ALL_TODOS } from '../actions';
 
 @Component({
   selector: 'app-todo-dashboard',
@@ -9,8 +9,10 @@ import { REMOVE_ALL_TODOS } from '../../actions';
   styleUrls: [ './todo-dashboard.component.css' ]
 })
 export class TodoDashboardComponent implements OnInit {
-  @select() todos;
-  @select() lastUpdate;
+  @select(state => state.tasking.todos)
+  todos;
+  @select(state => state.tasking.lastUpdate)
+  lastUpdate;
   constructor(private ngRedux: NgRedux<IAppState>) {}
   ngOnInit() {}
   clearTodos() {

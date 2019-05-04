@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { select, NgRedux } from '@angular-redux/store';
-import { ITodo } from '../../todo';
+import { ITodo } from '../todo';
 import { IAppState } from '../../store';
-import { ADD_TODOS, TOGGLE_TODOS, REMOVE_TODOS } from '../../actions';
+import { ADD_TODOS, TOGGLE_TODOS, REMOVE_TODOS } from '../actions';
 
 @Component({
   selector: 'app-todo-list',
@@ -10,7 +10,8 @@ import { ADD_TODOS, TOGGLE_TODOS, REMOVE_TODOS } from '../../actions';
   styleUrls: [ './todo-list.component.css' ]
 })
 export class TodoListComponent implements OnInit {
-  @select() todos;
+  @select(state => state.tasking.todos)
+  todos;
   model: ITodo = {
     id: 0,
     description: '',
